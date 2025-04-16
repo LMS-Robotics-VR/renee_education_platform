@@ -1,0 +1,60 @@
+# Example docker-compose.yml
+version: '3'
+services:
+  mariadb:
+    image: mariadb:latest
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MARIADB_CHARACTER_SET: utf8
+      MARIADB_COLLATE: utf8_unicode_ci
+      MYSQL_ROOT_PASSWORD: 
+    volumes:
+      - 'mariadb_data:/var/lib/mysql'
+
+  moodle:
+    image: docker.renee-project.eu/v2/myapp:v1
+    ports:
+      - "80:80"
+    links:
+      - mariadb:mariadb
+    volumes:
+      - moodledata:/var/www/moodledata/
+    restart: always
+    environment:
+      MOODLE_DB_HOST: mariadb
+      MOODLE_DB_PORT: 3306
+      MOODLE_DB_NAME: moodle
+      MOODLE_DB_USER: moodle
+      MOODLE_DB_PASSWORD: password
+      MOODLE_DATA_ROOT: /var/www/moodledata
+    labels:
+      cron.moodle.command: "/usr/local/bin/php /var/www/html/admin/cli/cron.php"
+      cron.moodle.interval: "every minute"
+    depends_on:
+      - mariadb
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8081:80"
+    links:
+      - mariadb:mariadb
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+  tasks:
+    image: funkyfuture/deck-chores:src-commit-0aaed2f
+    restart: unless-stopped
+    environment:
+      TIMEZONE: Europe/Athens
+      LABEL_NAMESPACE: cron
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+volumes:
+    db_data:
+    mariadb_data:
+    moodledata: 
