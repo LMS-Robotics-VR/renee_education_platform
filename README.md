@@ -32,6 +32,6 @@ STEPS
       - Choose database driver: "MariaDB (native/MariaDB)"
       - Database settings: Set all the above.
       - Click continue and Install all the plugins missing.
- 
+\
 ! ATTENTION: This process is prerequisite in case we use different docker image and we have to setup the Moodle from the beginning or the docker's containers were deleted!
  
