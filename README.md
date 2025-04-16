@@ -3,18 +3,18 @@ A Moodle app tailored for RENEE project
 
 ## Setup Instructions
 
-###📦 Prerequisites
+📦 Prerequisites
 - Docker installed
 - The Moodle docker image: docker.renee-project.eu/v2/myapp:v1
 
-###📁 Project Structure\
+📁 Project Structure\
    RENEE-moodle/ \
    │ \
    ├── docker-compose.yml \
    ├── Dockerfile \
    └── moodle-image.tar \
-<br />
-###STEPS <br />
+ 
+ ###STEPS \
  
  1. Get the image: \
     from .tar file into Docker: \
