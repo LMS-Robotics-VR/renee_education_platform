@@ -4,26 +4,26 @@ A Moodle app tailored for RENEE project
 Setup Instructions
 
 📦 Prerequisites <br />
-    - Docker installed <br />
-    - The Moodle docker image: docker.renee-project.eu/v2/myapp:v1  <br />
+        - Docker installed <br />
+        - The Moodle docker image: docker.renee-project.eu/v2/myapp:v1  <br />
  <br />
 📁 Project Structure
  <br />
-   RENEE-moodle/
-   │
-   ├── docker-compose.yml
-   ├── Dockerfile
-   └── moodle-image.tar
+   RENEE-moodle/ <br />
+   │ <br />
+   ├── docker-compose.yml <br />
+   ├── Dockerfile <br />
+   └── moodle-image.tar <br />
+<br />
+STEPS <br />
  
-STEPS
- 
- 1. Get the image:
-    from .tar file into Docker:
-        ``` cd ./RENEE-moodle/```
-        ``` docker load -i moodle-image.tar```
-    or pull from Docker Hub:
-        ```sudo docker login```
-        ```docker pull docker.renee-project.eu/v2/myapp:v1```
+ 1. Get the image: <br />
+    from .tar file into Docker: <br />
+        ``` cd ./RENEE-moodle/``` <br />
+        ``` docker load -i moodle-image.tar``` <br />
+    or pull from Docker Hub: <br />
+        ```sudo docker login``` <br />
+        ```docker pull docker.renee-project.eu/v2/myapp:v1``` <br />
  
 2. Setup Moodle:
   - Go to localhost (port 80)
