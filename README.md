@@ -3,7 +3,7 @@ A Moodle app tailored for RENEE project
 
 Setup Instructions
 
-📦 Prerequisites <br />
+📦 Prerequisites:
     - Docker installed <br />
     - The Moodle docker image: docker.renee-project.eu/v2/myapp:v1 
  <br />
