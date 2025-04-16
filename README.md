@@ -19,11 +19,11 @@ STEPS <br />
  
  1. Get the image: <br />
     from .tar file into Docker: <br />
-        ``` cd ./RENEE-moodle/``` <br />
-        ``` docker load -i moodle-image.tar``` <br />
+            ``` cd ./RENEE-moodle/``` <br />
+            ``` docker load -i moodle-image.tar``` <br />
     or pull from Docker Hub: <br />
-        ```sudo docker login``` <br />
-        ```docker pull docker.renee-project.eu/v2/myapp:v1``` <br />
+            ```sudo docker login``` <br />
+            ```docker pull docker.renee-project.eu/v2/myapp:v1``` <br />
  
 2. Setup Moodle:
   - Go to localhost (port 80)
