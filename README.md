@@ -9,21 +9,21 @@ A Moodle app tailored for RENEE project
 
 📁 Project Structure\
 
-      RENEE-moodle/ \
-      │ \
-      ├── docker-compose.yml \
-      ├── Dockerfile \
-      └── moodle-image.tar \
+      RENEE-moodle/ 
+      │ 
+      ├── docker-compose.yml 
+      ├── Dockerfile 
+      └── moodle-image.tar 
  
- ###STEPS \
+STEPS \
  
- 1. Get the image: \
+ 1. Get the image: 
       - from .tar file into Docker: \
-            ``` cd ./RENEE-moodle/``` \
-            ``` docker load -i moodle-image.tar``` \
+            ``` cd ./RENEE-moodle/``` 
+            ``` docker load -i moodle-image.tar``` 
       - or pull from Docker Hub: \
-            ```sudo docker login``` \
-            ```docker pull docker.renee-project.eu/v2/myapp:v1``` \
+            ```sudo docker login``` 
+            ```docker pull docker.renee-project.eu/v2/myapp:v1``` 
  
 3. Setup Moodle:
       - Go to localhost (port 80)
