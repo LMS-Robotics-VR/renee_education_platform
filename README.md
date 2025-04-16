@@ -9,11 +9,11 @@ A Moodle app tailored for RENEE project
 
 📁 Project Structure\
 
-   RENEE-moodle/ \
-   │ \
-   ├── docker-compose.yml \
-   ├── Dockerfile \
-   └── moodle-image.tar \
+      RENEE-moodle/ \
+      │ \
+      ├── docker-compose.yml \
+      ├── Dockerfile \
+      └── moodle-image.tar \
  
  ###STEPS \
  
