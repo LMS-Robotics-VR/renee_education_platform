@@ -18,14 +18,14 @@ A Moodle app tailored for RENEE project
  ###STEPS \
  
  1. Get the image: \
-            from .tar file into Docker: \
-               ``` cd ./RENEE-moodle/``` \
-               ``` docker load -i moodle-image.tar``` \
-            or pull from Docker Hub: \
-                  ```sudo docker login``` \
-                  ```docker pull docker.renee-project.eu/v2/myapp:v1``` \
+      from .tar file into Docker: \
+            ``` cd ./RENEE-moodle/``` \
+            ``` docker load -i moodle-image.tar``` \
+      or pull from Docker Hub: \
+            ```sudo docker login``` \
+            ```docker pull docker.renee-project.eu/v2/myapp:v1``` \
  
-2. Setup Moodle:
+3. Setup Moodle:
   - Go to localhost (port 80)
   - Choose the language: "English (en)"
   - Confirm paths: 
